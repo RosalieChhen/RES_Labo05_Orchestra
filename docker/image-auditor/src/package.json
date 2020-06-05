@@ -1,0 +1,14 @@
+{
+  "name": "auditor",
+  "version": "0.1.0",
+  "description": "for labo 5 orchestra",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "roro et bastien",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.26.0"
+  }
+}

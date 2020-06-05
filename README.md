@@ -120,21 +120,21 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 | #  | Topic |
 | ---  | --- |
 |Question | In a JavaScript program, if we have an object, how can we **serialize it in JSON**? |
-| | *Enter your response here...*  |
+| | *En utilisant la fonction JSON.stringify avec l'objet en paramètre*  |
 |Question | What is **npm**?  |
-| | *Enter your response here...*  |
+| | *C'est un utilitaire qui permet de gérer les librairies de Node.*  |
 |Question | What is the `npm install` command and what is the purpose of the `--save` flag?  |
-| | *Enter your response here...*  |
+| | *Cette commande permet d'installer un package de Node et d el'ajouter aux dépendances regroupées dans le fichie package.json. L'option --save est obsolète pour les version ultérieure à npm 5.0.0 (celle utilisée pour le labo est npm 6.14.4). Pour les versions précédentes, la commande npm install ajoutait le module dans le sous-dossier node-module et c'était l'option --save qui permettait d'ajouter la dépendance de cette librairie dans le fichier package.json*  |
 |Question | How can we use the `https://www.npmjs.com/` web site?  |
-| | *Enter your response here...*  |
+| | *Le site est utile pour la documentation sur l'utilisation de npm et pour rechercher des packages utiles pour nos applications.*  |
 |Question | In JavaScript, how can we **generate a UUID** compliant with RFC4122? |
-| | *Enter your response here...*  |
+| | *En utilisant le package UUID qui est conforme à RFC4122.*  |
 |Question | In Node.js, how can we execute a function on a **periodic** basis? |
-| | *Enter your response here...*  |
+| | *En utilisant la méthode setInterval.*  |
 |Question | In Node.js, how can we **emit UDP datagrams**? |
-| | *Enter your response here...*  |
+| | *En utilisant le package dgram et en appelant la fonction createSocket qui nous permet de transmettre le datagramme.*  |
 |Question | In Node.js, how can we **access the command line arguments**? |
-| | *Enter your response here...*  |
+| | *En accédant au tableau des arguments du processus courant avec process.argv[].*  |
 
 
 ## Task 3: package the "musician" app in a Docker image
@@ -142,17 +142,17 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 | #  | Topic |
 | ---  | --- |
 |Question | How do we **define and build our own Docker image**?|
-| | *Enter your response here...*  |
+| | *docker build -t res/musician .*  |
 |Question | How can we use the `ENTRYPOINT` statement in our Dockerfile?  |
-| | *Enter your response here...*  |
+| | *Pour définir une le point d'entrée du container avec un argument par défaut.*  |
 |Question | After building our Docker image, how do we use it to **run containers**?  |
-| | *Enter your response here...*  |
+| | *docker run -d res/musician <instrument>*  |
 |Question | How do we get the list of all **running containers**?  |
-| | *Enter your response here...*  |
+| | *docker ps -a*  |
 |Question | How do we **stop/kill** one running container?  |
-| | *Enter your response here...*  |
+| | *docker kill <containerName>*  |
 |Question | How can we check that our running containers are effectively sending UDP datagrams?  |
-| | *Enter your response here...*  |
+| | *docker logs <containerName> --follow*  |
 
 
 ## Task 4: implement an "auditor" Node.js application
@@ -160,9 +160,9 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 | #  | Topic |
 | ---  | ---  |
 |Question | With Node.js, how can we listen for UDP datagrams in a multicast group? |
-| | *Enter your response here...*  |
+| | *En utilisant le package dgram et en appelant les fonctions createSocket et bind pour établir une connexion.*  |
 |Question | How can we use the `Map` built-in object introduced in ECMAScript 6 to implement a **dictionary**?  |
-| | *Enter your response here...* |
+| | *L'objet Map est un dictionnaire clé-valeur.* |
 |Question | How can we use the `Moment.js` npm module to help us with **date manipulations** and formatting?  |
 | | *Enter your response here...* |
 |Question | When and how do we **get rid of inactive players**?  |

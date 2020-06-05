@@ -1,0 +1,14 @@
+{
+  "name": "musicians",
+  "version": "0.1.0",
+  "description": "For RES labo 5 orchestra",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roro et Bastien",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^8.1.0"
+  }
+}
