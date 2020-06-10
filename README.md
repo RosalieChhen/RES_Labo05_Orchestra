@@ -164,11 +164,11 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 |Question | How can we use the `Map` built-in object introduced in ECMAScript 6 to implement a **dictionary**?  |
 | | *L'objet Map est un dictionnaire clé-valeur.* |
 |Question | How can we use the `Moment.js` npm module to help us with **date manipulations** and formatting?  |
-| | *Enter your response here...* |
+| | *Nous n'avons pas utilisé ce module (simplement javascript suffit).* |
 |Question | When and how do we **get rid of inactive players**?  |
-| | *Enter your response here...* |
+| | *On utilise setInterval pour contrôler toutes les 10 secondes que chaque musiciens à joué au moins une fois dans les dernières secondes* |
 |Question | How do I implement a **simple TCP server** in Node.js?  |
-| | *Enter your response here...* |
+| | *En utilisant le package net, on créé un socket par lequel le serveur écoute (listen) et lorsqu'une connexion arrive, on envoie le payload JSON (on).* |
 
 
 ## Task 5: package the "auditor" app in a Docker image
@@ -176,7 +176,7 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 | #  | Topic |
 | ---  | --- |
 |Question | How do we validate that the whole system works, once we have built our Docker image? |
-| | *Enter your response here...* |
+| | *...* |
 
 
 ## Constraints
