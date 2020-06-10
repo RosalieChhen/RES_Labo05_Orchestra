@@ -1,5 +1,4 @@
 // Sending a message to all nodes on the local network
-const { v4: uuidv4 } = require('uuid');
 var dgram = require('dgram');
 var s = dgram.createSocket('udp4');
 
