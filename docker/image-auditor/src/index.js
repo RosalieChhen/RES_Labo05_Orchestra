@@ -56,11 +56,7 @@ setInterval(function(){
 
 var net = require('net');
 
-var server = net.createServer(function(socket) {
-	socket.pipe(socket);
-});
-
-server.listen(2205, '127.0.0.1');
+var server = net.createServer().listen(2205);
 
 server.on('connection', function(socket){
 	socket.write(JSON.stringify(Array.from(listMusicians.values())));
