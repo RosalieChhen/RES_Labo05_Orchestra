@@ -1,6 +1,7 @@
 // Sending a message to all nodes on the local network
 var dgram = require('dgram');
 var s = dgram.createSocket('udp4');
+const { v4: uuidv4 } = require('uuid');
 
 
 var protocol = {
@@ -30,15 +31,18 @@ switch(process.argv[2]){
 		throw "Instrument is not valid";
 }
 
-var payload = noise;
+var payload = {
+	uuid : uuidv4(),
+	noise: noise
+};
 
-message = Buffer.from(payload);	
+message = Buffer.from(JSON.stringify(payload));	
 
 setInterval(function(){
 	// Send the payload via UDP (multicast)
 	s.send(message, 0, message.length, protocol.PROTOCOL_PORT, protocol.PROTOCOL_MULTICAST_ADDRESS,
 	function(err, bytes) {
-		console.log("Sending payload: " + payload + " via port " + s.address().port);
+		console.log("Sending payload: " + JSON.stringify(payload) + " via port " + s.address().port);
 	});
 }, 1000);
 

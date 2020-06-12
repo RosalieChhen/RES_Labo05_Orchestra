@@ -92,11 +92,15 @@ function compareAuditorStateAgainstRunningContainers( checkDone ) {
 			DockerUtils.lookForMusicianContainers, 
 			askAuditorForActiveInstruments
 		], function(err, results) {
+
 			var instrumentsSeenInDocker = results[0].sort();
 			var instrumentsSeenByAuditor = results[1].map( function( raw ) {
 				return raw.instrument;
 			});
+
 			instrumentsSeenByAuditor.sort();
+
+
 			
 			/*
 			 * We use the chai.js npm module to make an assertion on the 2 results. What is seen in Docker should
@@ -143,6 +147,7 @@ async.parallel(startContainerFunctions, function(err, results) {
 		 * Check that the auditor has detected all running musicians, then schedule a new test, where we kill a
 		 * musician, wait for 8 seconds and check the status.
 		 */
+
 		compareAuditorStateAgainstRunningContainers(function(err, result) {
 			checkThatAuditorDetectsKilledContainer();			
 		});
